@@ -43,7 +43,7 @@ As a result, you should get something similar to this
 
 ![elements layout](./images/elements_layout.png)
 
-**After you create the entire structure of the component**, you need to reset all settings for the ** Block ** elements. To do this, you need to delete all the selected properties, later we will indicate the necessary ones through the styles. The ** Padding ** property is set to 0 and then reset in the same way.
+**After you create the entire structure of the component**, you need to reset all settings for the **Block** elements. To do this, you need to delete all the selected properties, later we will indicate the necessary ones through the styles. The **Padding** property is set to 0 and then reset in the same way.
 
 ![reset elements config](./images/reset_config.png)
 

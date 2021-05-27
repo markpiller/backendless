@@ -6,7 +6,7 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 
 ## Disclaimer
 
-Нейминг классов и элементов в этом компоненте используется для примера. Выможете использовать так как вам нравится.
+Названия для классов и элементов в этом компоненте используется для примера. Вы можете делать так как вам нравится.
 
 ***
 
@@ -16,7 +16,7 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 
 ![select tab user interface](./images/tab_user_interface.png)
 
-Общая структура компонента, для наглядности ID элементов названы так же как и классы.
+Ниже показана общая структура компонента. Для наглядности ID элементов названы так же как и классы.
 
 ![component structure](./images/structure.png)
 
@@ -27,11 +27,11 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
         - modal__close - кнопка закрытия модального окна, можно делать как вам надо
     - modal__shadow - затеняющая шторка за модальным окном, ограничивает доступ к другим элементам страницы, обязательный элемент
 
-Все элементы компонента кроме кнопок используют элемент Блок.
+Все элементы компонента, кроме кнопок, используют элемент Block.
 
 ![component elements block](./images/elements_block.png)
 
-Для кнопок я использовал элемент Баттон, но вы можете использовать то что вам надо
+Для кнопок я использовал элемент Button, но вы можете использовать то что вам надо
 
 ![component elements button](./images/elements_button.png)
 
@@ -39,7 +39,7 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 
 ![add blick classes](./images/add_block_classes.png)
 
-**После того как создадите всю структуру компонента** надо сбросить все настройки для элементов. Для этого надо удалить все выделенные свойства, позже мы укажем нужные через стили. Свойства паддинг и марджин ставим 0 и потом так же сбрасываем. Некоторые свойства сбросить не получится, просто пропустите это)
+**После того как создадите всю структуру компонента** надо сбросить все настройки у элементов. Для этого надо удалить все выделенные свойства, позже мы укажем нужные через стили. Свойства Padding и Margin ставим 0 и потом так же сбрасываем. Некоторые свойства сбросить не получится, просто пропустите это)
 
 ![reset elements config](./images/reset_config.png)
 
@@ -47,7 +47,7 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 
 ## Styles
 
-Для создания стилей переключаемся на вкладку Theme. Внутри выбираем вкладки Editor и Extensions
+Для создания стилей переключаемся на вкладку Theme. Внутри страницы выбираем вкладки Editor и Extensions
 
 ![select tab theme](./images/tab_theme.png)
 
@@ -55,7 +55,7 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 
 ![add new extensions](./images/new_extensions.png)
 
-**MxModal** less-mixin для удобства множественного использования. Редактируйте если понимаете что делаете!
+Extension **MxModal** это less-mixin в который вынесены базовые стили компонента для удобства множественного использования. Редактируйте если понимаете что делаете!
 
 ```less
 .mx-modal {
@@ -88,7 +88,7 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
     bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    z-index: -1;
+    z-index: -1 !important;
     background-color: rgba(0, 0, 0, 0.7);
     width: 100% !important;
     height: 100% !important;
@@ -102,7 +102,7 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 }
 ```
 
-**Modal** общая стилизация в соответствии с вашим проектом. Самое важное это импорт миксинов, остальные свойства как вам удобно
+Extension **Modal** содержит общую стилизацию компонента на странице в соответствии с вашим проектом. Самое важное это импорт миксинов, остальные свойства делайте как вам удобно.
 
 ```less
 .modal__open {
@@ -110,10 +110,6 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 }
 .modal {
     .mx-modal();
-
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
 }
 .modal__card {
     .mx-modal__card();
@@ -122,10 +118,11 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
     justify-content: flex-end !important;
     align-items: flex-end !important;
     background-color: #fff;
-    width: 600px !important;
     height: 300px !important;
     border-radius: 5px;
-    box-shadow: 0px 3px 1px -2px rgb(0, 0, 0, 0.20), 0px 2px 2px 0px rgb(0, 0, 0, 0.14), 0px 1px 5px 0px rgb(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.20), 
+                0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+                0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 .modal__close {
     width: 200px !important;
@@ -142,7 +139,7 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 
 ![go to start logic](./images/go_logic.png)
 
-В открывшейся вкладке Logik для элемента Page вешаем на событие On Page Enter логику как на скрине. Так мы создадим глобальную переменную isOpenModal состояния модального окна для всей страницы. Устанавливаем значение False, что в нашей логике будет определять закрытое модальное окно. 
+В открывшейся вкладке Logic для элемента Page вешаем на событие On Page Enter логику как на скрине. Так мы создадим глобальную переменную isOpenModal состояния модального окна для всей страницы. Устанавливаем значение False, что в нашей логике будет определять закрытое модальное окно. 
 
 Если вы хотите использовать несколько разных модальных окон, то добавьте для каждого окна свою уникальную переменную.
 
@@ -154,11 +151,11 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 
 Теперь добавляем логику для остальных элементов.
 
-На кнопке открытия окна используем событие On Click Event. Меняем значение переменной isOpenModal на True
+На кнопке открытия окна используем событие On Click Event. Присваиваем переменной isOpenModal значение True
 
 ![logic open window](./images/logic_open.png)
 
-Аналогично добавляем на клик по кнопке закрытия и затеняющей шторке
+Аналогично добавляем обработчик на событие клик для кнопки закрытия и затеняющей шторки
 
 ![logic close with button](./images/logic_close_button.png)
 ![logic close with shadow](./images/logic_close_shadow.png)

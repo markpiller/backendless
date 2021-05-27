@@ -106,7 +106,7 @@ Extension **MxModal** is a less-mixin in which the basic styles of the component
 }
 ```
 
-The Extension ** Modal ** contains the general styling of the component on the page according to your project. The most important thing is to import mixins, do the rest of the properties as you like.
+The Extension **Modal** contains the general styling of the component on the page according to your project. The most important thing is to import mixins, do the rest of the properties as you like.
 
 ```less
 .modal__open {

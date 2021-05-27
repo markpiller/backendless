@@ -154,7 +154,7 @@ An example of a component can be viewed **[demo](https://eu.backendlessappconten
 
 Теперь добавляем логику для остальных элементов.
 
-На кнопкt открытия окна используем событие On Click Event. Меняем значение переменной isOpenModal на True
+На кнопке открытия окна используем событие On Click Event. Меняем значение переменной isOpenModal на True
 
 ![logic open window](./images/logic_open.png)
 

@@ -39,7 +39,11 @@ When creating elements **immediately assign ID and Classes** according to the st
 
 ![add blick classes](./images/add_block_classes.png)
 
-**After you create the entire structure of the component** you need to reset all settings for the elements. To do this, you need to delete all the selected properties, later we will indicate the necessary ones through the styles. Set the **Padding** and **Margin** properties to 0 and then reset them as well. Some properties cannot be reset, just skip this)
+As a result, you should get something similar to this
+
+![elements layout](./images/elements_layout.png)
+
+**After you create the entire structure of the component**, you need to reset all settings for the ** Block ** elements. To do this, you need to delete all the selected properties, later we will indicate the necessary ones through the styles. The ** Padding ** property is set to 0 and then reset in the same way.
 
 ![reset elements config](./images/reset_config.png)
 
